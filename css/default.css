@@ -237,6 +237,8 @@ a:hover {
 	font-size: 24px;
 	color: #ba000d;
 	text-align: center;
+	margin-top: 20px;
+    margin-bottom: 50px;
 }
 
 .main_partners_resize_block
@@ -285,6 +287,13 @@ a:hover {
 .events
 {
 	text-align: left;
+}
+
+.events h4
+{
+	text-align: left;
+	font-family: "sanssemibold";
+	color: #000;
 }
 
 .events h3
