@@ -1170,3 +1170,24 @@ footer h2 {
     color: #ba000d;
     text-decoration: none;
 }
+
+.allNews
+{
+    font-size: 16px;
+    color: black;
+    font-family: "sansregular";
+}
+
+.allNews p 
+{
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-family: "sansbold";
+}
+.allNewsText
+{
+    font-size: 24px;
+    margin: 20px;
+    color: #BA000D;
+    text-align: center;
+}
