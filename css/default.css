@@ -1,0 +1,318 @@
+/* General Demo Style */
+ @font-face {
+    font-family: "sansbold";
+    src: url("../fonts/OpenSans-Bold.ttf");
+}
+@font-face {
+    font-family: "sanslight";
+    src: url("../fonts/OpenSans-Light.ttf");
+}
+@font-face {
+    font-family: "sansregular";
+    src: url("../fonts/OpenSans-Regular.ttf");
+}
+@font-face {
+    font-family: "sanssemibold";
+    src: url("../fonts/OpenSans-Semibold.ttf");
+}
+@font-face {
+    font-family: "ptsans";
+    src: url("../fonts/ptsans.ttf");
+}
+
+
+body, html { font-size: 100%; 	padding: 0; margin: 0;}
+
+/* Reset */
+*,
+*:after,
+*:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/* Clearfix hack by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+
+.clearfix:after {
+	clear: both;
+}
+
+body {
+    font-family: "sansregular";
+    color: #ba000d;
+
+}
+
+a {
+	color: #aaa;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+.mainText
+{
+	float: left;
+	background-color: #d3d3d3;
+	width: 250px;
+	height: 525px;
+	text-align: left;
+	padding-left: 10px;
+	padding-top: 10px;
+	font-family: "sansbold";
+	color: #ba000d;
+	line-height: 0.8;
+	font-size: 30px;
+	margin-right: 60px;
+}
+.mainText span 
+{
+	font-family: "sanslight";
+	color: #000;
+	font-size: 16px;
+	line-height: 0.8;
+}
+.mainText h2 
+{
+	font-family: "sansregular";
+	color: #000;
+	font-size: 20px;
+}
+.main,
+.container > header {
+	float: left;
+	margin: 0 auto;
+}
+
+.container > header {
+	padding: 2.875em 1.875em 1.875em;
+}
+
+.container > header h1 {
+	font-size: 2.125em;
+	line-height: 1.3;
+	margin: 0;
+	float: left;
+	font-weight: 400;
+}
+
+.container > header span {
+	display: block;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.5em;
+	padding: 0 0 0.6em 0.1em;
+}
+
+.container > header nav {
+	float: right;
+}
+
+.container > header nav a {
+	display: block;
+	float: left;
+	position: relative;
+	width: 2.5em;
+	height: 2.5em;
+	background: #fff;
+	border-radius: 50%;
+	color: transparent;
+	margin: 0 0.1em;
+	border: 4px solid #ba000d;
+	text-indent: -8000px;
+}
+
+.container > header nav a:after {
+	content: attr(data-info);
+	color: #ba000d;
+	position: absolute;
+	width: 600%;
+	top: 120%;
+	text-align: right;
+	right: 0;
+	opacity: 0;
+	pointer-events: none;
+}
+
+.container > header nav a:hover:after {
+	opacity: 1;
+}
+
+.container > header nav a:hover {
+	background: #ba000d;
+}
+
+.icon-drop:before, 
+.icon-arrow-left:before {
+	font-family: 'sansregular';
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 2;
+	text-align: center;
+	color: #ba000d;
+	-webkit-font-smoothing: antialiased;
+	text-indent: 8000px;
+	padding-left: 8px;
+}
+
+.container > header nav a:hover:before {
+	color: #fff;
+}
+
+.icon-drop:before {
+	content: "\e000";
+}
+
+.icon-arrow-left:before {
+	content: "\f060";
+}
+
+.reference {
+	text-align: center;
+	font-size: 75%;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+.carousel-indicators {
+	bottom:-40px;
+	left:0;
+	width:100%;
+	background:#ccc;
+	padding: 6px 0px;
+	margin-left:0;
+	border-top:2px solid #fff;
+}
+.carousel-indicators li {
+	width:12px;
+	height:12px;	
+	background:#fff;
+	border-color:#fff;
+
+}
+
+.carousel-indicators .active {
+	width:14px;
+	height:14px;
+	background:#ba000d;
+	border-color:#ba000d;
+}
+.carousel-inner .thumbnail {
+	margin-bottom:0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+}
+.carousel-inner .caption {
+	background:#ddd;
+	padding: 10px;
+	color: #000;
+	
+}
+.carousel-inner .caption p 
+{
+	font-family: "sansregular";
+	font-size: 18px;
+}
+
+.carousel-inner .caption h4
+{
+	font-family: "sansbold";
+	font-size: 20px;
+}
+
+.partnersText
+{
+	font-size: 24px;
+	color: #ba000d;
+	text-align: center;
+}
+
+.main_partners_resize_block
+{
+	float: left;
+	margin-left: 35px;
+	margin-bottom: 50px;
+
+}
+
+.main_partners_cont
+{
+	margin: 50px;
+}
+
+.social
+{
+	margin-top: 20px;
+	height: 70px;
+}
+
+.socialIcon
+{
+	margin-right: 20px;
+	float: right;
+}
+.allEvents
+{	
+	margin-top: 100px;
+}
+.allEvents a
+{
+	color: #BA000D !important;
+	text-decoration: none;
+}
+
+.archiveText
+{
+	font-size: 24px;
+	font-family: "sansbold";
+	color: #ba000d;
+	text-align: center;
+	margin: 30px;
+}
+
+.events
+{
+	text-align: left;
+}
+
+.events h3
+{
+	text-align: center;
+	font-family: "sansbold";
+}
+
+.events p 
+{
+	color: #3b3b3b;
+	font-family: "sansregular";
+	font-size: 18px;
+}
+.events p span
+{
+	color: #3b3b3b;
+	font-family: "sansbold";
+	font-size: 20px;
+}
+
+.aboutMainText h5
+{
+	font-family: "sanssemibold";
+	font-size: 18px;
+}
+
+.abImg
+{
+	margin: 0 auto;
+}
