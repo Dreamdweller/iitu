@@ -1135,7 +1135,7 @@ footer h2 {
   float: left;
   background-color: #d3d3d3;
   width: 250px;
-  height: 4000px;
+  height: 4200px;
   text-align: right;
   padding-top: 10px;
   font-family: "sansregular";
@@ -1194,55 +1194,29 @@ footer h2 {
 }
 
 #contacts2 {
-   padding-top: 20px;
+  padding-top: 10px;
     margin-top: 0px;
+    padding-right: 10px;
     width: 250px;
     height: 499px;
     position: relative;
     z-index: 100;
     background-color: #D3D3D3;
+    padding-left: 10px;
 }
 
-#addres {
-    font-size: 20px;
-    font-family: "sanssemibold";
-    color: #313131;
-    line-height: 1.2;
-
-    text-align: center;
-}
-#phones {
-    font-family: "sanslight";
-    font-size: 30px;
-    color: #313131;
-    line-height: 1.2;
-
-    text-align: center;
-}
-
-#quest {
-    font-family: "sansbold";
-    font-size: 26px;
-    color: #313131;
-    line-height: 1.2;
-    text-transform: uppercase;
-    text-align: center;
-}
-#quest a {
-    font-family: "sanslight";
+#contacts2 h4 
+{
     font-size: 18px;
-    color: #00a8c6;
-    border-bottom: 1.5px dashed #00a8c6;
-    line-height: 1.2;
-    text-transform: none;
-    text-align: center;
+    font-family: "sansbold";
+    color: black;
 }
-
-#quest a:hover {
-    border-bottom: none;
-    cursor: pointer;
+#contacts2 p 
+{
+    font-size: 16px;
+    font-family: "sansregular";
+    color: #3b3b3b;
 }
-
 
 .mapp 
 {

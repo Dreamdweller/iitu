@@ -40,7 +40,7 @@
                 <li><a href="chairs.html">Кафедры</a></li>
                 <li><a href="solutions.html">Решения</a></li>
                 <li><a href="infocenter.html">Инфоцентр</a></li>
-                <li><a href="contacts.php" class="last">Контакты</a></li>
+                <li><a href="contacts.html" class="last">Контакты</a></li>
             </ul>
         </nav>
         <div class="pullcontainer">
