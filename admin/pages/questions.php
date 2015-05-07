@@ -110,7 +110,7 @@ $logged = false;
            
             <!-- /.row -->
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-12">
                     <!-- /.panel -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -119,7 +119,7 @@ $logged = false;
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="row">
-                                <div class="col-lg-8">
+                                <div class="col-lg-12">
                                     <div class="table-responsive">
                                         <table class="table table-bordered table-hover table-striped">
                                             <thead>
@@ -148,7 +148,7 @@ $logged = false;
                                     <!-- /.table-responsive -->
                                 </div>
                                 <!-- /.col-lg-4 (nested) -->
-                                <div class="col-lg-8">
+                                <div class="col-lg-12">
                                     <div id="morris-bar-chart"></div>
                                 </div>
                                 <!-- /.col-lg-8 (nested) -->

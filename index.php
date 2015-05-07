@@ -5,17 +5,15 @@
 
  ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="utf-8">
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/queries.css">
 	  <!-- Fonts -->
 
-    <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Fonts -->
     
@@ -24,8 +22,7 @@
     <script type="text/javascript" src="js/SmoothScroll.js"></script>
 
     <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
-    <script src="js/modernizr.custom.js"></script>
+ 
 
 
   </head>
@@ -38,8 +35,7 @@
                 <li><a href="index.php" class="active">Главная</a></li>
                 <li><a href="about.html">Об университете</a></li>
                 <li><a href="chairs.html">Кафедры</a></li>
-                <li><a href="solutions.html">Решения</a></li>
-                <li><a href="infocenter.html">Инфоцентр</a></li>
+                <li><a href="abiturient.html">Абитуриенту</a></li>
                 <li><a href="contacts.html" class="last">Контакты</a></li>
             </ul>
         </nav>
@@ -194,36 +190,6 @@
         interval:   40000
       });
     </script>
-    <script src="js/scripts.js"></script>
-
-    <script src="js/unslider.min.js"></script>
-
-    <script src="js/jquery.maskedinput.min.js"></script>
-    <script src="js/scripts2.js"></script>
-
-    <script src="js/jquery.cbpQTRotator.min.js"></script>
-    <script>
-      $( function() {
-        /*
-        - how to call the plugin:
-        $( selector ).cbpQTRotator( [options] );
-        - options:
-        {
-          // default transition speed (ms)
-          speed : 700,
-          // default transition easing
-          easing : 'ease',
-          // rotator interval (ms)
-          interval : 8000
-        }
-        - destroy:
-        $( selector ).cbpQTRotator( 'destroy' );
-        */
-
-        $( '#cbp-qtrotator' ).cbpQTRotator();
-
-      } );
-    </script>
-
+  
   </body>
 </html>

@@ -1151,6 +1151,46 @@ footer h2 {
     font-size: 24px;
 }
 
+.practiceText2
+{
+  float: left;
+  background-color: #d3d3d3;
+  width: 250px;
+  height: 4450px;
+  text-align: right;
+  padding-top: 10px;
+  font-family: "sansregular";
+  padding-right: 10px;
+  color: #3b3b3b;
+  font-size: 18px;
+  line-height: 1;
+
+}
+.practiceText2 span 
+{
+    font-family: "sanslight";
+    font-size: 24px;
+}
+.practiceText3
+{
+  float: left;
+  background-color: #d3d3d3;
+  width: 250px;
+  height: 3700px;
+  text-align: right;
+  padding-top: 10px;
+  font-family: "sansregular";
+  padding-right: 10px;
+  color: #3b3b3b;
+  font-size: 18px;
+  line-height: 1;
+
+}
+.practiceText3 span 
+{
+    font-family: "sanslight";
+    font-size: 24px;
+}
 .practice-links
 {
     position: relative;

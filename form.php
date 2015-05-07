@@ -11,7 +11,7 @@
 
                 mysql_query("INSERT INTO questions VALUES (NULL,'$email','$message')") or mysql_error();
 
-        		header("Location: index.php?mess=Вопрос отправлен");
+        		header("Location: index.php?mess=Ваш вопрос отправлен. Ждите ответа. ");
         }else{
              header("Location: index.php?mess=Заполните поля");
         }

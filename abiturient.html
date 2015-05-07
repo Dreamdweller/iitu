@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/jquery.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="js/SmoothScroll.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/default.css" />
+    
+
+    <script src="js/jquery.scrollTo.js" type="text/javascript"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        $("a.topLink").click(function() {
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top+13+ "px"
+               
+            }, {
+                duration: 800
+            });
+            return false;
+        });
+    });
+    </script>
+
+  </head>
+  <body>
+    <header class="clearfix"> <div class="container">
+        <div class="logo col-md-3"><h2 class="logo-text"><a href="index.php"><img src="img/logo_ru.png"></a></h2></div>
+       
+        <nav class="clearfix">
+            <ul class="clearfix">
+                <li><a href="index.php">Главная</a></li>
+                <li><a href="about.html">Об университете</a></li>
+                <li><a href="chairs.html">Кафедры</a></li>
+                <li><a href="abiturient.html" class="active">Абитуриенту</a></li>
+                <li><a href="contacts.html" class="last">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="pullcontainer">
+        <a href="#" id="pull"><i class="fa fa-bars fa-2x"></i></a>
+        </div> 
+        </div>   
+    </header>
+    <!-- ЦИТАТЫ -->
+    <div class="lightblock">
+    <div class="container practiceBlock">
+      <div class="practiceText3">
+        <ul class="practice-links">
+              <li><a href="#abiturient1" class="topLink">Что мы можем Вам предложить?</a></li>
+              <li><a href="#abiturient2" class="topLink">Правила приёма</a></li>
+              <li><a href="#abiturient3" class="topLink">Lingva</a></li>
+
+        </ul>
+      </div>
+
+      <div class="col-md-9 aboutMainText">
+          <h3>Поступающим</h3>
+          <span id="abiturient1"></span>
+          <h4>Что мы можем Вам предложить?</h4>
+          <p> Международный IT Университет предлагает:</p>
+          <p>- Качественный отбор абитуриентов при поступлении;</p>
+          <p>- Материально-техническое оснащение на высоком уровне;</p>
+          <p>- Американские программы Университета Carnegie Mellon- 10 модулей;</p>
+          <p>- Диплом казахстанский – государственного образца;</p>
+          <p>- Сертификат Университета Carnegie Mellon – международно-признанный документ;</p>
+          <p>- Американская кредитная система обучения с лучшими элементами отечественного стандарта;</p>
+          <p>- Интересная студенческая жизнь!</p>
+          <p>- Обменные программы с зарубежными ВУЗами;</p>
+          <p>- Стажировки за рубежом;</p>
+          <p>- участие в международных IT соревнованиях и интеллектуальных олимпиадах;</p>
+          <p>- Трудоустройство выпускников IT Университета на выгодные позиции, с перспективой карьерного роста и материального благополучия.</p>
+          <p>- Возможность продолжения обучения в магистратуре, PhD и др.;</p>
+          <img src="img/a1.jpg" class="abImg" width="600px;">
+          <p>Специальности бакалавриата:</p>
+          <p>• информационные системы (предмет по выбору ЕНТ– физика);</p>
+          <p>• вычислительная техника и программное обеспечение (предмет по выбору ЕНТ– физика);</p>
+          <p>• информатика (предмет по выбору ЕНТ– физика);</p>
+          <p>• менеджмент в IT (предмет по выбору ЕНТ - география);</p>
+          <p>• финансы в IT (предмет по выбору ЕНТ - география);</p>
+          <p>• электронная журналистика (предмет по выбору ЕНТ - любой предмет);</p>
+          <p>• радиотехника, электроника и телекоммуникации (предмет по выбору ЕНТ– физика);</p>
+          <p>• математическое компьютерное моделирование (предмет по выбору ЕНТ– физика);</p>
+          <p>ЯЗЫКИ ОБУЧЕНИЯ:</p>
+          <p>Казахский/английский</p>
+          <p>Русский/английский</p>
+          <p>ВНЕ КОНКУРСА ПРИНИМАЮТСЯ:</p>
+          <p>• Обладатели «Алтын белгi»</p>
+          <p>• Призеры (1-2-3 места) республиканских олимпиад по физике, математике, информатике</p>
+          <p>НА КОНКУРСНОЙ ОСНОВЕ</p>
+          <p>• Собеседование</p>
+          <p>• Экзамены:</p>
+          <p>– Компьютерное тестирование по информатике</p>
+          <p>– Английский</p>
+          <p>УНИВЕРСИТЕТ ПРЕДОСТАВЛЯЕТ 3 ВИДА ГРАНТОВ:</p>
+          <p>• гранты от Министерства образования и науки Республики Казахстан</p>
+          <p>• Гранты Национальных компаний Республики Казахстан</p>
+          <p>• Гранты Международного IT-Университета</p>
+          <p>А также, гранты на Военную кафедру.</p>
+          <span id="abiturient2"></span>
+          <h4>Правила приёма</h4>
+          <p>ПРАВИЛА ПРИЕМА В МЕЖДУНАРОДНЫЙ УНИВЕРСИТЕТ ИНФОРМАЦИОННЫХ ТЕХНОЛОГИЙ (НА БАКАЛАВРИАТ) В 2014 ГОДУ</p>
+          <p>Перечень необходимых документов для поступления</p>
+          <p>1.Аттестат с приложением (оригинал)</p>
+          <p>2.Сертификат ЕНТ (оригинал)</p>
+          <p>3.2 копии удостоверения личности</p>
+          <p>4.8 фото 3х4</p>
+          <p>5.Мед. справка 086У (со снимком флюорографии)</p>
+          <p>6.Прививочная карта</p>
+          <p>7.Копия приписного свидетельства (для юношей)</p>
+          <p>8.Копия грамот и дипломов на основании Типовых правил приема в высшие учебные заведения Республики Казахстан </p>
+          <img src="img/a2.jpg" class="abImg" width="600px;">
+          <span id="abiturient3"></span>
+          <h4>Lingva</h4>
+          <p> Образовательный Лингвистический Центр «Lingva» характеризуется:</p>
+          <p>- профессиональным преподавательским составом;</p>
+          <p>- удобным для школьников временем проведения курсов;</p>
+          <p>- курсы проводятся 3 раза в неделю по 2 академических часа;</p>
+          <p>- по окончанию выдается сертификат, подтверждающий уровень знания английского языка;</p>
+          <p>- сертификат уровня Intermediate и выше, освобождает от вступительного экзамена по английскому языку в Международный IT Университет.</p>
+          <p>Lingva центр предлагает курс грамматики английского языка для абитуриентов с базовым уровнем знания английского языка. Главная цель Lingva центра - подготовить абитуриентов к успешному обучению в Международном IT Университете, где учебные программы преподаются на английском языке.</p>
+          <p>Набор на курсы производится по результатам компьютерного тестирования. Тест состоит из 40 вопросов, на ответы предоставляется 50 минут. Сразу по окончанию теста будущие учащиеся получают результаты. В соответствии с набранными баллами определяется уровень владения английским языком.</p>
+          
+      </div>
+    
+    </div>
+    </div>
+    <!-- ЦИТАТЫ -->
+    <div class="darkblock clearfix">
+    
+    </div>
+
+   <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <p style="margin-top: 50px;">© Copyright 2010—2015 IITU. Все права защищены.</p>
+            </div>
+
+         <div class="col-md-4">
+            <div class="social">
+              <div class="socialIcon"><a href="https://twitter.com/iitukz"><img src="img/tw.png" width="50px;"></a></div>
+              <div class="socialIcon"><a href="https://vk.com/iitu_kz"><img src="img/vk.png" width="50px;"></a></div>
+            </div>
+          </div>
+        
+      </div>  
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script>
+      width=screen.width; // ширина  
+      height=screen.height; // высота  
+        $(window).scroll(function()
+        {   
+
+        getscroll();
+        if (yScroll > 80)
+        {
+          $('.practice-links').css('position','fixed').css('top' ,'0px')
+        }
+         else
+        {
+          $('.practice-links').css('position','absolute').css('top', '80px')
+        }
+        });
+
+        function getscroll()
+        {
+          if (self.pageYOffset){
+          yScroll = self.pageYOffset;
+          xScroll = self.pageXOffset;
+          } else if (document.documentElement && document.documentElement.scrollTop){
+          yScroll = document.documentElement.scrollTop;
+          xScroll = document.documentElement.scrollLeft;
+          } else if (document.body){
+          yScroll = document.body.scrollTop;
+          xScroll = document.body.scrollLeft;
+          }
+        };
+    </script>
+
+
+  </body>
+</html>

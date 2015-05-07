@@ -37,8 +37,7 @@
                 <li><a href="index.php">Главная</a></li>
                 <li><a href="about.html">Об университете</a></li>
                 <li><a href="chairs.html">Кафедры</a></li>
-                <li><a href="solutions.html">Решения</a></li>
-                <li><a href="infocenter.html">Инфоцентр</a></li>
+                <li><a href="abiturient.html">Абитуриенту</a></li>
                 <li><a href="contacts.html" class="last">Контакты</a></li>
             </ul>
         </nav>
@@ -63,7 +62,7 @@
                   
                     <div class="archiveText"><?php echo $row['header']; ?></div>
                     <div class="events">
-                      <img src="admin/pages/images/<?php echo $row['image'];?>" style=''/>
+                      <img style="width: 800px;" src="admin/pages/images/<?php echo $row['image'];?>" style=''/>
                       <br><span>Опубликовано <?php echo $row['post_date']; ?></span>
                       <p><?php echo $row['content']; ?></p>
                     </div>
