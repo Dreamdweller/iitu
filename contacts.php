@@ -1,8 +1,3 @@
-<?php 
-  mysql_connect("localhost","root","");
-  mysql_select_db("iitu");
-
- ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -48,29 +43,94 @@
         </div>   
     </header>
     <!-- ЦИТАТЫ -->
-    <div class="lightblock">
-    <div class="container">
-        <?php 
-                    if(isset($_GET['id'])){
-                        $id = $_GET['id'];
-                     }else{
-                        header("Location:index.php");
-                     }
-                     $qqq = "SELECT * FROM news WHERE del = 0 AND id={$id}";                
-                     $query = mysql_query($qqq);
-                     $count = 0;
-                    if($row = mysql_fetch_array($query)){ ?>
+
+
+      <div id="sevenline">
+       <div class="container">
+        <div id="contacts2">
+            Задайте нам вопрос 
+            <form action="index.php" method="POST" >
+              <input class="fname" type="text" name="name" placeholder="Введите Ваше имя" required><br/>
+              <input class="fmail" type="text" name="email" placeholder="Введите Ваш E-mail" required><br/>
+              <textarea class="fmessage" placeholder="Введите Ваш вопрос" required></textarea>
+              
+              <input type="hidden" name="type" value="Главная форма">
+              <button class="mainform">Задать!</button>
+
+            </form>
+          
+        </div>
+      </div>
+      <div class="mapp">
+        <div class="karta">
+          <div id="page">
+
+            <div class="gMap-holder" id="map_canvas"></div>
+            <script type="text/javascript">
+              function loadScript() 
+              {
+                var script = document.createElement("script");
+                script.type = "text/javascript";
+                script.src = "http://maps.googleapis.com/maps/api/js?sensor=true&callback=initializeMap";
+                document.body.appendChild(script);
+              }
+              if (window.addEventListener) window.addEventListener("load", loadScript, false);
+              else if (window.attachEvent) window.attachEvent("onload", loadScript);
+
+              function initializeMap(){
+                var myLatlng = new google.maps.LatLng(43.235099, 76.909655);
+                var cen = new google.maps.LatLng(43.234998, 76.908190);
+                
+
+                var myOptions = {
+                  zoom: 17,
+                  scrollwheel: false,
+                  center: cen,
+                  zoomControl: true,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                  mapTypeControlOptions: {
+                    position: google.maps.ControlPosition.BOTTOM_LEFT
+                  }
+                }
+                var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+                var markerImage = new google.maps.MarkerImage(
+                    'img/tip.png',
+                    new google.maps.Size(90,90),
+                    new google.maps.Point(0,0)
                   
-                    <div class="archiveText"><?php echo $row['header']; ?></div>
-                    <div class="events">
-                      <img src="admin/pages/images/<?php echo $row['image'];?>" style=''/>
-                      <br><span>Опубликовано <?php echo $row['post_date']; ?></span>
-                      <p><?php echo $row['content']; ?></p>
-                    </div>
-                    <?php } ?>
+                );
+                var marker = new google.maps.Marker({
+                  icon: markerImage,
+                  position: myLatlng, 
+                  map: map,
+                  animation: google.maps.Animation.DROP,
+                  
+                });
+
+                google.maps.event.addListener(marker, 'click', toggleBounce);
+
+                function toggleBounce() {
+
+                  if (marker.getAnimation() != null) {
+                    marker.setAnimation(null);
+                  } else {
+                    marker.setAnimation(google.maps.Animation.BOUNCE);
+                  }
+                }
+      
+              }
+            </script>
+
+                    
+          </div>
+        </div>
+      </div>
+    </div>
+
          
-    </div>
-    </div>
+
+
     <!-- ЦИТАТЫ -->
     
     <footer>

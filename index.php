@@ -31,16 +31,16 @@
   </head>
   <body>
 		<header class="clearfix"> <div class="container">
-		    <div class="logo col-md-3"><h2 class="logo-text"><a href="index.html"><img src="img/logo_ru.png"></a></h2></div>
+		    <div class="logo col-md-3"><h2 class="logo-text"><a href="index.php"><img src="img/logo_ru.png"></a></h2></div>
        
 		    <nav class="clearfix">
             <ul class="clearfix">
-                <li><a href="index.html" class="active">Главная</a></li>
+                <li><a href="index.php" class="active">Главная</a></li>
                 <li><a href="about.html">Об университете</a></li>
                 <li><a href="chairs.html">Кафедры</a></li>
                 <li><a href="solutions.html">Решения</a></li>
                 <li><a href="infocenter.html">Инфоцентр</a></li>
-                <li><a href="contacts.html" class="last">Контакты</a></li>
+                <li><a href="contacts.php" class="last">Контакты</a></li>
             </ul>
         </nav>
         <div class="pullcontainer">
@@ -84,7 +84,7 @@
                       <div class="item">
                       <?php 
                       } ?> 
-                      <a href="fullnew.php?id=<?php echo $row['id']; ?>"><img class="thumbnail" src="admin/pages/images/<?php echo $row['image'];?>" style='width:848px; height:300px' alt="Slide1"></a>
+                      <a href="fullnew.php?id=<?php echo $row['id']; ?>"><img class="thumbnail" src="admin/pages/images/<?php echo $row['image'];?>" style='width:848px; ' alt="Slide1"></a>
                         <div class="caption">
                           <h4><?php echo $row['header']; ?></h4>
                             <p><?php echo $row['part']; ?></p>
@@ -110,15 +110,27 @@
     <div class=" darkblock">
        <div class="container">
           <div class="allNewsText">Новости</div>
-          <div class="allNews">
+          <div class="allNews col-md-8">
             <?php 
                      $qqq = "SELECT * FROM news WHERE del = 0 LIMIT 3";                
                      $query = mysql_query($qqq);
                      $count = 0;
                     while ($row = mysql_fetch_array($query)){ ?>
-                      <div class="col-md-4"><a href="fullnew.php?id=<?php echo $row['id']; ?>"><img src="admin/pages/images/<?php echo $row['image'];?>" style='width:350px; height:124px'><p><?php echo $row['header']; ?></p></a></div>
+                      <div class="col-md-6"><a href="fullnew.php?id=<?php echo $row['id']; ?>"><img src="admin/pages/images/<?php echo $row['image'];?>" style='width:350px; '><p><?php echo $row['header']; ?></p></a></div>
             <?php } ?>
           </div>
+          <div class="formMainPage col-md-4">
+            <h1>Задайте вопрос<br> сейчас</h1>
+            <form class="mainForm" action="">
+              <label>Ваш e-mail</label><br>
+              <input type="text" name="email" class="formMail"><br>
+              <label>Ваше сообщение</label><br>
+              <textarea name="message" class="formMessage"></textarea>
+              <input type="submit" class="button solid-color" value="ЗАДАТЬ ВОПРОС">
+            </form>
+           
+          </div>
+
       </div>
     </div>
 

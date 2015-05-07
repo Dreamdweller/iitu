@@ -665,7 +665,7 @@ nav ul li a.active {
 }
 .carousel {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 .av1 {
     height: 88px;
@@ -1033,7 +1033,8 @@ footer h2 {
 .formMainPage
 {
     text-align: center;
-    background-color: #000
+    background-color: #000;
+    margin-bottom: 80px;
 }
 .formMainPage h1 
 {
@@ -1046,7 +1047,7 @@ footer h2 {
 .mainForm input, .mainForm textarea
 {
     background-color: #d3d3d3;
-    color: #ba000d;
+    color: #3b3b3b;
     font-size: 18px;
     font-family: "sanssemibold";
     margin: 10px;
@@ -1190,4 +1191,85 @@ footer h2 {
     margin: 20px;
     color: #BA000D;
     text-align: center;
+}
+
+#contacts2 {
+   padding-top: 20px;
+    margin-top: 0px;
+    width: 250px;
+    height: 499px;
+    position: relative;
+    z-index: 100;
+    background-color: #D3D3D3;
+}
+
+#addres {
+    font-size: 20px;
+    font-family: "sanssemibold";
+    color: #313131;
+    line-height: 1.2;
+
+    text-align: center;
+}
+#phones {
+    font-family: "sanslight";
+    font-size: 30px;
+    color: #313131;
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+#quest {
+    font-family: "sansbold";
+    font-size: 26px;
+    color: #313131;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+}
+#quest a {
+    font-family: "sanslight";
+    font-size: 18px;
+    color: #00a8c6;
+    border-bottom: 1.5px dashed #00a8c6;
+    line-height: 1.2;
+    text-transform: none;
+    text-align: center;
+}
+
+#quest a:hover {
+    border-bottom: none;
+    cursor: pointer;
+}
+
+
+.mapp 
+{
+
+    top:0 !important;
+    left: 0 !important;
+    position: absolute !important;
+    width: 100%;
+    height: 500px;
+    margin-top: 68px;
+}
+
+#page
+{
+    width:100%;
+    height: 100%;
+}
+
+.karta
+{
+    height:500px;
+}
+
+#map_canvas
+{
+    width:100%;
+    height:500px;
+    margin:0 auto;
+    position: absolute;
 }
