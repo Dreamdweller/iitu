@@ -1,8 +1,8 @@
 <?php 
     session_start();
-
     mysql_connect("localhost","root","");
     mysql_select_db("iitu");
+
 
 $logged = false;
 
@@ -13,39 +13,6 @@ $logged = false;
     }else{
         header("Location: login.php");
     }
-
-    if(isset($_GET['act'])){
-            if($_GET['act']=='logout'){
-
-                unset($_SESSION['user_id']);
-
-                header("Location:login.php");
-
-            }
-            if($_GET['act']=='delete'){
-
-                $id = $_GET['id'];
-                mysql_query("UPDATE events SET del = 1 WHERE id = '$id'") or mysql_error();
-
-                header("Location:index.php");
-
-            }
-
-        }
-
-    if (!empty($_POST)){
-        if(!empty($_POST['theme'] && !empty($_POST['time']))){
-                
-                $theme = $_POST['theme'];
-                $time=$_POST['time'];
-
-               mysql_query("INSERT INTO events VALUES (NULL,'$theme','$time',0)") or mysql_error();
-
-
-                    }else{
-                        header("Location:index.php?error=Fill inputs");
-                    }
-                }
 
  ?>
 <!DOCTYPE html>
@@ -85,6 +52,7 @@ $logged = false;
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+      
 
 </head>
 
@@ -113,16 +81,16 @@ $logged = false;
                     <ul class="nav" id="side-menu">
                         
                         <li>
-                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Добавление событий<span class="fa arrow"></span></a>
+                            <a href="index.php"><i class="fa fa-dashboard fa-fw"></i> Добавление событий</a>
                         </li>
                         <li>
-                            <a href="news.php"><i class="fa fa-edit fa-fw"></i> Добавление новостей</a>
+                            <a href="news.php"><i class="fa fa-edit fa-fw"></i> Добавление новостей <span class="fa arrow"></span></a>
                         </li>
-                         <li>
+                        <li>
                             <a href="questions.php"><i class="fa fa-wrench fa-fw"></i> Задаваемые вопросы</a>
                         </li>
                         <li>
-                            <a href="index.php?act=logout">Выйти</a>
+                            <a href="news.php?act=logout">Выйти</a>
                         </li>
                     </ul>
                 </div>
@@ -134,7 +102,7 @@ $logged = false;
         <div id="page-wrapper">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="page-header">События в IITU</h1>
+                    <h1 class="page-header">Вопросы</h1>
                 </div>
                 <!-- /.col-lg-12 -->
             </div>
@@ -146,7 +114,7 @@ $logged = false;
                     <!-- /.panel -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Все события:
+                            <i class="fa fa-bar-chart-o fa-fw"></i> Все вопросы:
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
@@ -157,26 +125,23 @@ $logged = false;
                                             <thead>
                                                 <tr>
                                                     <th>#</th>
-                                                    <th>Тема</th>
-                                                    <th>Время</th>
+                                                    <th>Email</th>
+                                                    <th>Вопрос</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                            <?php 
-                                                $qqq = "SELECT * FROM events WHERE del = 0";                
+                                                <?php 
+                                                $qqq = "SELECT * FROM questions";                
                                                 $query = mysql_query($qqq);
                                                 while ($row = mysql_fetch_array($query))
                                                 {
-                                             ?>
+                                                ?>
                                                 <tr>
                                                     <td><?php echo $row['id']; ?></td>
-                                                    <td><?php echo $row['theme']; ?></td>
-                                                    <td><span><?php echo $row['time']; ?></span>
-                                                    <a href="index.php?act=delete&id=<?php echo $row['id'] ?>"style="margin-left:400px  ">x</a></td>
+                                                    <td><?php echo $row['email']; ?></td>
+                                                    <td><?php echo $row['message']; ?></td>      
                                                 </tr>
-                                                <?php 
-                                                 }
-                                                 ?>
+                                                <?php } ?>
                                             </tbody>
                                         </table>
                                     </div>
@@ -207,67 +172,7 @@ $logged = false;
                 </div>
                 <!-- /.col-lg-4 -->
             </div>
-            <div class="row">
-                <div class="col-lg-8">
-                    <!-- /.panel -->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <i class="fa fa-bar-chart-o fa-fw"></i> Добавление события:
-                        </div>
-                        <!-- /.panel-heading -->
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-lg-8">
-                                    <div class="table-responsive">
-                                        <form action="index.php" method="post">
-                                        <table class="table table-bordered table-hover table-striped">
-                                            <thead>
-                                                <tr>
-                                                    <th>Тема события:</th>
-                                                    <th>Дата события:</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><input type="text" name="theme"></td>
-                                                    <td><input type="date" name="time"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                        <button type="submit" class="btn">Сохранить</button>
-                                        </form>
-                                        <?php if(isset($_GET['error'])){ 
-                                            echo "<span style='color:red;'>".$_GET['error']."</span>";
-                                       } 
-                                    ?>
-                                    </div>
-                                    <!-- /.table-responsive -->
-                                </div>
-                                <!-- /.col-lg-4 (nested) -->
-                                <div class="col-lg-8">
-                                    <div id="morris-bar-chart"></div>
-                                </div>
-                                <!-- /.col-lg-8 (nested) -->
-                            </div>
-                            <!-- /.row -->
-                        </div>
-                        <!-- /.panel-body -->
-                    </div>
-                    <!-- /.panel -->
-                    
-                    <!-- /.panel -->
-                </div>
-                <!-- /.col-lg-8 -->
-                <div class="col-lg-4">
-                    
-                    <!-- /.panel -->
-                    
-                    <!-- /.panel -->
-                    
-                    <!-- /.panel .chat-panel -->
-                </div>
-                <!-- /.col-lg-4 -->
-            </div>
+           
             <!-- /.row -->
         </div>
         <!-- /#page-wrapper -->
@@ -275,7 +180,18 @@ $logged = false;
     </div>
     <!-- /#wrapper -->
 
-
 </body>
+<script type="text/javascript" src="../dist/js/tinymce.min.js"></script>
+        <script type="text/javascript">
+            tinymce.init({
+                selector: "#tiny",
+                plugins: [
+                    "advlist autolink lists link image charmap print preview anchor",
+                    "searchreplace visualblocks code fullscreen",
+                    "insertdatetime media table contextmenu paste"
+                ],
+                toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+            });
+        </script>
 
 </html>
