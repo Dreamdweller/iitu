@@ -74,7 +74,7 @@
             <div id="myCarousel" class="carousel slide">        
                 <div class="carousel-inner">           
                     <?php 
-                     $qqq = "SELECT * FROM news WHERE del = 0 LIMIT 3";                
+                     $qqq = "SELECT * FROM news WHERE del = 0 ORDER BY post_date LIMIT 3";                
                      $query = mysql_query($qqq);
                      $count = 0;
                     while ($row = mysql_fetch_array($query)){ ?>
@@ -112,7 +112,7 @@
           <div class="allNewsText">Новости</div>
           <div class="allNews col-md-8">
             <?php 
-                     $qqq = "SELECT * FROM news WHERE del = 0 LIMIT 3";                
+                     $qqq = "SELECT * FROM news WHERE del = 0 ORDER BY post_date DESC LIMIT 4";                
                      $query = mysql_query($qqq);
                      $count = 0;
                     while ($row = mysql_fetch_array($query)){ ?>
@@ -121,13 +121,18 @@
           </div>
           <div class="formMainPage col-md-4">
             <h1>Задайте вопрос<br> сейчас</h1>
-            <form class="mainForm" action="">
+            <form class="mainForm" action="form.php" method="post">
               <label>Ваш e-mail</label><br>
-              <input type="text" name="email" class="formMail"><br>
+              <input type="email" name="email" class="formMail"><br>
               <label>Ваше сообщение</label><br>
               <textarea name="message" class="formMessage"></textarea>
               <input type="submit" class="button solid-color" value="ЗАДАТЬ ВОПРОС">
             </form>
+              <?php 
+                if(isset($_GET['mess'])){
+                    echo "<span style='color:red;'>".$_GET['mess']."</span>";
+                }
+               ?>
            
           </div>
 

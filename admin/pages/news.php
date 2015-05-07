@@ -138,6 +138,9 @@ $logged = false;
                             <a href="news.php"><i class="fa fa-edit fa-fw"></i> Добавление новостей <span class="fa arrow"></span></a>
                         </li>
                         <li>
+                            <a href="questions.php"><i class="fa fa-wrench fa-fw"></i> Задаваемые вопросы</a>
+                        </li>
+                        <li>
                             <a href="news.php?act=logout">Выйти</a>
                         </li>
                     </ul>
